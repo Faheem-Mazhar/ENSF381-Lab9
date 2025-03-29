@@ -37,7 +37,7 @@ def predict_house_price():
     cats = True if 'pets' in data and data['pets'] else False
     dogs = True if 'pets' in data and data['pets'] else False
 
-    sample_data = [
+    formated_data = [
         data['city'],
         data['province'],
         float(data['latitude']),
@@ -52,7 +52,7 @@ def predict_house_price():
         cats,
         dogs
     ]
-    sample_df = pd.DataFrame([sample_data], columns=[
+    sample_df = pd.DataFrame([formated_data], columns=[
         'city', 'province', 'latitude', 'longitude', 'lease_term',
         'type', 'beds', 'baths', 'sq_feet', 'furnishing',
         'smoking', 'cats', 'dogs'
